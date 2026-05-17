@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fate</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="preload" href="splash-hero.png" as="image">
+<style>
+  .splash-art-wrap{
+    background-image: url("splash-hero.png");
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+<script src="image-slot.js" defer></script>
+<script src="site.js" defer></script>
+</head>
+<body data-palette="ink" data-density="spacious" data-cursor="on">
+
+<!-- ───── CUSTOM CURSOR ───── -->
+<div id="cursor" class="cursor" aria-hidden="true">
+  <span class="cursor-label">view</span>
+</div>
+
+<!-- ───── SPLASH ───── -->
+<div id="splash" class="splash" role="button" tabindex="0" aria-label="Enter">
+  <div class="splash-art-wrap">
+    <image-slot id="splash-hero" class="splash-art" shape="rect" fit="cover" placeholder="hero painting"></image-slot>
+  </div>
+  <div class="splash-vignette"></div>
+
+  <div class="splash-top">
+    <span class="splash-mark">FATE</span>
+  </div>
+
+  <div class="splash-center">
+    <h1 class="splash-name" aria-label="Fate">
+      <span class="ltr" style="--i:0">F</span><span class="ltr" style="--i:1">a</span><span class="ltr" style="--i:2">t</span><span class="ltr" style="--i:3">e</span>
+    </h1>
+  </div>
+
+  <div class="splash-foot">
+    <span class="splash-meta">PRAGUE BASED <br>CONTEMPORARY PAINTER. <span class="arr">↘</span></span>
+    <span class="pill splash-enter">ENTER <span class="arr">↘</span></span>
+  </div>
+</div>
+
+<!-- ───── SITE ───── -->
+<main id="site" class="site" aria-hidden="true">
+
+  <header class="topbar">
+    <a href="#top" class="brand" data-cursor="hover">Fate</a>
+    <nav class="nav">
+      <a href="#works" class="pill" data-cursor="hover">WORK</a>
+      <a href="#studio" class="pill" data-cursor="hover">STUDIO</a>
+      <a href="#about" class="pill" data-cursor="hover">BIOGRAPHY</a>
+      <a href="#contact" class="pill" data-cursor="hover">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- ───── CURRENT WORKS ───── -->
+  <section id="works" class="works">
+    <a id="top" aria-hidden="true"></a>
+    <h2 class="section-h" data-reveal>SELECTED WORKS <span class="arr">↘</span></h2>
+
+    <!-- The Motherhood -->
+    <figure id="work-01" class="piece piece-medium" style="--ratio: 150/100;">
+      <div class="piece-frame" data-zoom="The Motherhood" data-cursor="view">
+        <image-slot id="w-motherhood" shape="rect" placeholder="THE MOTHERHOOD" fit="contain"></image-slot>
+      </div>
+      <figcaption>
+        <span class="cap-l"><span class="cap-num">01</span> THE MOTHERHOOD</span>
+        <span class="cap-meta">AC, OIL · 100 × 150 · 2026</span>
+      </figcaption>
+    </figure>
+
+    <!-- Motherhood process triptych -->
+    <div class="triptych">
+      <div class="triptych-label">PROCESS — THE MOTHERHOOD</div>
+      <figure class="piece" style="--ratio: 4/5;">
+        <div class="piece-frame" data-zoom="The Motherhood — initial" data-cursor="view">
+          <image-slot id="w-mother-1" shape="rect" placeholder="i." fit="contain"></image-slot>
+        </div>
+        <figcaption><span class="cap-l"><span class="cap-num">i.</span></span></figcaption>
+      </figure>
+      <figure class="piece" style="--ratio: 4/5;">
+        <div class="piece-frame" data-zoom="The Motherhood — middle" data-cursor="view">
+          <image-slot id="w-mother-2" shape="rect" placeholder="ii." fit="contain"></image-slot>
+        </div>
+        <figcaption><span class="cap-l"><span class="cap-num">ii.</span></span></figcaption>
+      </figure>
+      <figure class="piece" style="--ratio: 4/5;">
+        <div class="piece-frame" data-zoom="The Motherhood — gold" data-cursor="view">
+          <image-slot id="w-mother-3" shape="rect" placeholder="iii." fit="contain"></image-slot>
+        </div>
+        <figcaption><span class="cap-l"><span class="cap-num">iii.</span></span></figcaption>
+      </figure>
+    </div>
+
+
+    <!-- SEE ALL TOGGLE -->
+    <div class="see-all-wrap" id="seeAllWrap">
+      <span class="see-all-rule" aria-hidden="true"></span>
+      <button class="see-all" id="seeAllBtn" data-cursor="hover">see all paintings ↘</button>
+      <span class="see-all-rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="works-rest" id="worksRest" hidden>
+      <!-- pair: Struggling + Nirvana -->
+      <div class="pair">
+        <figure id="work-02" class="piece" style="--ratio: 100/120;">
+          <div class="piece-frame" data-zoom="The Struggling" data-cursor="view">
+            <image-slot id="w-struggling" shape="rect" placeholder="THE STRUGGLING" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">02</span> THE STRUGGLING</span>
+            <span class="cap-meta">AC · 100 × 120 · 2025</span>
+          </figcaption>
+        </figure>
+        <figure id="work-03" class="piece" style="--ratio: 1/1;">
+          <div class="piece-frame" data-zoom="The Nirvana" data-cursor="view">
+            <image-slot id="w-nirvana" shape="rect" placeholder="THE NIRVANA" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">03</span> THE NIRVANA</span>
+            <span class="cap-meta">AC, OIL · 100 × 100 · 2025</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Ample Mystic Land, panoramic -->
+      <figure id="work-04" class="piece piece-bleed" style="--ratio: 200/100;">
+        <div class="piece-frame" data-zoom="Ample Mystic Land" data-cursor="view">
+          <image-slot id="w-ample" shape="rect" placeholder="AMPLE MYSTIC LAND" fit="contain"></image-slot>
+        </div>
+        <figcaption>
+          <span class="cap-l"><span class="cap-num">04</span> AMPLE MYSTIC LAND</span>
+          <span class="cap-meta">MIXED · 100 × 200 · 2026</span>
+        </figcaption>
+      </figure>
+
+      <!-- pair offset: Anxiety + Bayda -->
+      <div class="pair pair-offset">
+        <figure id="work-05" class="piece" style="--ratio: 1/1;">
+          <div class="piece-frame" data-zoom="The Anxiety" data-cursor="view">
+            <image-slot id="w-anxiety" shape="rect" placeholder="THE ANXIETY" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">05</span> THE ANXIETY</span>
+            <span class="cap-meta">AC, OIL · 100 × 100 · 2026</span>
+          </figcaption>
+        </figure>
+        <figure id="work-06" class="piece" style="--ratio: 1/1;">
+          <div class="piece-frame" data-zoom="The Bayda" data-cursor="view">
+            <image-slot id="w-bayda" shape="rect" placeholder="THE BAYDA" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">06</span> THE BAYDA <span class="nfs">NFS</span></span>
+            <span class="cap-meta">AC · 100 × 100 · 2026</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Fay Mystic Land, narrow -->
+      <figure id="work-07" class="piece piece-narrow" style="--ratio: 1/1;">
+        <div class="piece-frame" data-zoom="The Fay Mystic Land" data-cursor="view">
+          <image-slot id="w-fay" shape="rect" placeholder="THE FAY MYSTIC LAND" fit="contain"></image-slot>
+        </div>
+        <figcaption>
+          <span class="cap-l"><span class="cap-num">07</span> THE FAY MYSTIC LAND</span>
+          <span class="cap-meta">AC · 100 × 100 · 2026</span>
+        </figcaption>
+      </figure>
+
+      <!-- Mental Process, ultra-wide -->
+      <figure id="work-08" class="piece piece-bleed" style="--ratio: 300/100;">
+        <div class="piece-frame" data-zoom="The Mental Process" data-cursor="view">
+          <image-slot id="w-mental" shape="rect" placeholder="THE MENTAL PROCESS" fit="contain"></image-slot>
+        </div>
+        <figcaption>
+          <span class="cap-l"><span class="cap-num">08</span> THE MENTAL PROCESS</span>
+          <span class="cap-meta">AC · 100 × 300 · 2026</span>
+        </figcaption>
+      </figure>
+
+      <!-- Nature -->
+      <div class="nature-block">
+        <figure id="work-09" class="piece" style="--ratio: 1/1;">
+          <div class="piece-frame" data-zoom="The Nature" data-cursor="view">
+            <image-slot id="w-nature" shape="rect" placeholder="THE NATURE" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">09</span> THE NATURE</span>
+            <span class="cap-meta">AC · 100 × 100 · 2026</span>
+          </figcaption>
+        </figure>
+        <div class="nature-details">
+          <figure class="piece" style="--ratio: 4/3;">
+            <div class="piece-frame" data-zoom="The Nature — initial" data-cursor="view">
+              <image-slot id="w-nature-d1" shape="rect" placeholder="i." fit="contain"></image-slot>
+            </div>
+          </figure>
+          <figure class="piece" style="--ratio: 4/3;">
+            <div class="piece-frame" data-zoom="The Nature — middle" data-cursor="view">
+              <image-slot id="w-nature-d2" shape="rect" placeholder="ii." fit="contain"></image-slot>
+            </div>
+          </figure>
+          <figure class="piece" style="--ratio: 4/3;">
+            <div class="piece-frame" data-zoom="The Nature — detail" data-cursor="view">
+              <image-slot id="w-nature-d3" shape="rect" placeholder="iii." fit="contain"></image-slot>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <!-- pair: Anger + Path -->
+      <div class="pair">
+        <figure id="work-10" class="piece" style="--ratio: 1/1;">
+          <div class="piece-frame" data-zoom="The Anger" data-cursor="view">
+            <image-slot id="w-anger" shape="rect" placeholder="THE ANGER" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">10</span> THE ANGER</span>
+            <span class="cap-meta">AC · 100 × 100 · 2026</span>
+          </figcaption>
+        </figure>
+        <figure id="work-11" class="piece" style="--ratio: 1/1;">
+          <div class="piece-frame" data-zoom="The Path" data-cursor="view">
+            <image-slot id="w-path" shape="rect" placeholder="THE PATH" fit="contain"></image-slot>
+          </div>
+          <figcaption>
+            <span class="cap-l"><span class="cap-num">11</span> THE PATH</span>
+            <span class="cap-meta">AC · 100 × 100 · 2026</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+</section>
+
+  <!-- ───── CATALOG / INDEX (list with counters) ───── -->
+  <section id="catalog" class="catalog" hidden>
+    <h2 class="section-h" data-reveal>INDEX <span class="arr">↘</span></h2>
+    <ul class="cat-list">
+      <li class="cat-row" data-cursor="hover" data-go="#work-01"><span class="cat-name">The Motherhood</span><span class="cat-num">(01 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-02"><span class="cat-name">The Struggling</span><span class="cat-num">(02 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-03"><span class="cat-name">The Nirvana</span><span class="cat-num">(03 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-04"><span class="cat-name">Ample Mystic Land</span><span class="cat-num">(04 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-05"><span class="cat-name">The Anxiety</span><span class="cat-num">(05 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-06"><span class="cat-name">The Bayda</span><span class="cat-num">(06 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-07"><span class="cat-name">The Fay Mystic Land</span><span class="cat-num">(07 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-08"><span class="cat-name">The Mental Process</span><span class="cat-num">(08 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-09"><span class="cat-name">The Nature</span><span class="cat-num">(09 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-10"><span class="cat-name">The Anger</span><span class="cat-num">(10 / 11)</span></li>
+      <li class="cat-row" data-cursor="hover" data-go="#work-11"><span class="cat-name">The Path</span><span class="cat-num">(11 / 11)</span></li>
+    </ul>
+  </section>
+
+  <!-- ───── STUDIO ───── -->
+  <section id="studio" class="studio">
+    <h2 class="section-h" data-reveal>STUDIO <span class="arr">↘</span></h2>
+
+    <div class="studio-grid">
+      <div class="studio-row">
+        <figure class="piece studio-tall" style="--ratio: 3/4;">
+          <div class="piece-frame" data-zoom="In the studio" data-cursor="view">
+            <image-slot id="p-studio-1" shape="rect" placeholder="STUDIO" fit="contain"></image-slot>
+          </div>
+        </figure>
+        <aside class="studio-aside">
+          <span class="studio-aside-num">i.</span>
+          <p>
+            This is how I worked in my small studio room. I paint on the floor and
+            directly on the canvas without a frame, because of the space limitation
+            I have — which wouldn't allow me to work big strokes and experiment in
+            thick layers. Nevertheless, it turned out to be an opportunity for me
+            to explore mindfully and allowed me to have a closer look at the canvas.
+          </p>
+        </aside>
+      </div>
+
+      <div class="studio-pullwrap" data-reveal>
+        <p class="studio-pull">Creativity often grows through limitation.</p>
+      </div>
+
+      <div class="studio-row studio-row-rev">
+        <figure class="piece" style="--ratio: 4/5;">
+          <div class="piece-frame" data-zoom="Studio, 2024" data-cursor="view">
+            <image-slot id="p-studio-2" shape="rect" placeholder="2024" fit="contain"></image-slot>
+          </div>
+        </figure>
+        <aside class="studio-aside">
+          <span class="studio-aside-num">ii.</span>
+          <p>
+            The best part is finding the gentle, flowing texture and softness of
+            the acrylic medium — like oil and watercolour. I studied watercolour
+            for three years (2019&ndash;22) as my first medium; maybe all the
+            techniques I explored make sense after all.
+          </p>
+        </aside>
+      </div>
+
+      <div class="studio-row">
+        <figure class="piece" style="--ratio: 4/5;">
+          <div class="piece-frame" data-zoom="Studio" data-cursor="view">
+            <image-slot id="p-studio-3" shape="rect" placeholder="STUDIO" fit="contain"></image-slot>
+          </div>
+        </figure>
+        <aside class="studio-aside">
+          <span class="studio-aside-num">iii.</span>
+          <p>
+            This footage was from 2024. I covered up the piece after taking the
+            shot, sensing myself growing attached to it. Detachment felt necessary
+            to achieve the final form and become what it needed to be.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── BIOGRAPHY ───── -->
+  <section id="about" class="about">
+    <h2 class="section-h" data-reveal>BIOGRAPHY <span class="arr">↘</span></h2>
+
+    <div class="about-grid">
+      <figure class="piece portrait" style="--ratio: 4/5;">
+        <div class="piece-frame" data-zoom="Portrait" data-cursor="view">
+          <image-slot id="a-portrait" shape="rect" placeholder="PORTRAIT" fit="contain"></image-slot>
+        </div>
+      </figure>
+      <div class="about-text">
+        <p class="about-lead" data-reveal>BURMA
+IN PRAGUE.</p>
+        <p data-reveal style="height: 0px">
+</p>
+      </div>
+      <div class="about-exhibits" data-reveal>
+        <div class="ex-h">SELECTED EXHIBITIONS</div>
+        <ul class="ex-list">
+          <li class="ex-row ex-row-toggle" data-cursor="hover" data-expand="ex-bishop-court">
+            <span class="ex-year">2024</span>
+            <span class="ex-name">Group exhibition · Bishop Court</span>
+            <span class="ex-place">PRAGUE</span>
+            <span class="ex-num">(01 / 01)</span>
+          </li>
+        </ul>
+        <div class="ex-photos" id="ex-bishop-court">
+          <figure class="ex-photo">
+            <div class="piece-frame" data-zoom="Bishop Court · 01" data-cursor="view">
+              <image-slot id="ex-photo-1" shape="rect" fit="contain" placeholder="BISHOP COURT · 01"></image-slot>
+            </div>
+            <figcaption>
+              <span class="cap-meta">01 · Installation view</span>
+            </figcaption>
+          </figure>
+          <figure class="ex-photo">
+            <div class="piece-frame" data-zoom="Bishop Court · 02" data-cursor="view">
+              <image-slot id="ex-photo-2" shape="rect" fit="contain" placeholder="BISHOP COURT · 02"></image-slot>
+            </div>
+            <figcaption>
+              <span class="cap-meta">02 · Detail</span>
+            </figcaption>
+          </figure>
+          <figure class="ex-photo">
+            <div class="piece-frame" data-zoom="Bishop Court · 03" data-cursor="view">
+              <image-slot id="ex-photo-3" shape="rect" fit="contain" placeholder="BISHOP COURT · 03"></image-slot>
+            </div>
+            <figcaption>
+              <span class="cap-meta">03 · Opening night</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── CONTACT — minimal big-type rows ───── -->
+  <footer id="contact" class="contact">
+    <h2 class="section-h" data-reveal>CONTACT <span class="arr">↘</span></h2>
+
+    <div class="contact-stack">
+      <a class="contact-line" href="mailto:zinminphyo.fate@gmail.com" data-cursor="hover">
+        <span class="cl-h">Enquire</span>
+        <span class="cl-v">zinminphyo.fate@gmail.com</span>
+        <span class="cl-arr">↘</span>
+      </a>
+      <a class="contact-line" href="tel:+420722383468" data-cursor="hover">
+        <span class="cl-h">Phone</span>
+        <span class="cl-v">+420 722 383 468</span>
+        <span class="cl-arr">↘</span>
+      </a>
+      <div class="contact-line contact-line-static">
+        <span class="cl-h">Location</span>
+        <span class="cl-v">Prague, Czech Republic</span>
+      </div>
+    </div>
+
+    <div class="contact-fine">
+      <span>FATE · ZIN MIN PHYO · 2026</span>
+      <span>
+</span>
+      <span class="back-top" data-cursor="hover" id="backTop">TO TOP <span class="arr">↗</span></span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ───── LIGHTBOX ───── -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lb-close pill" id="lbClose" aria-label="Close" data-cursor="hover">CLOSE</button>
+  <div class="lb-stage" id="lbStage"></div>
+  <div class="lb-caption" id="lbCaption"></div>
+</div>
+
+<!-- ===== TWEAKS REMOVED ===== -->
+
+<!-- defer scripts moved to <head> for faster splash hydration -->
+</body>
+</html>
